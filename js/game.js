@@ -588,7 +588,7 @@ window.Game = (function () {
            * @param {Object} state
            * @return {Verdict}
            */
-            function (state) {
+          function (state) {
             var me = state.objects.filter(function (object) {
               return object.type === ObjectType.ME;
             })[0];
@@ -603,7 +603,7 @@ window.Game = (function () {
            * @param {Object} state
            * @return {Verdict}
            */
-            function (state) {
+          function (state) {
             return state.keysPressed.ESC ? Verdict.PAUSE : Verdict.CONTINUE;
           },
 
@@ -612,7 +612,7 @@ window.Game = (function () {
            * @param {Object} state
            * @return {Verdict}
            */
-            function (state) {
+          function (state) {
             return Date.now() - state.startTime > 3 * 60 * 1000 ?
               Verdict.FAIL :
               Verdict.CONTINUE;
